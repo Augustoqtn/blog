@@ -11,14 +11,14 @@
   </head>
 
   <body>
-  <div class="bg-primary text-white text-center mb-4 p-4">
-  <%=link_to root_path, class: "text-white" do %>
-    <h1 class "display-4">Blog do Augusto</h1>
-    <% end %>
-    <p class="lead"> olá, aqui você encontrará artigos sobre diversos assuntos tecnologicos!</p>
-  </div>
-   
-   <div class='container'>
+    <div class="bg-primary text-white text-center mb-4 p-4">
+      <%=link_to root_path, class: "text-white" do %>
+        <h1 class "display-4">Blog do Augusto</h1>
+      <% end %>
+      <p class="lead"> olá, aqui você encontrará artigos sobre diversos assuntos tecnologicos!</p>
+    </div>
+
+    <div class='container'>
       <% flash.each do |type, message| %>
         <div class='alert alert-<%= type == 'alert' ? 'danger' : 'success' %> alert-dismissible fade show' role='alert'>
           <%= message %>
@@ -28,10 +28,10 @@
         </div>
       <% end %>
 
-    <%= yield %>
+      <%= yield %>
     </div>
     <footer class="bg-primary text-white text-center mt-5 p-4">
-    copyright ® Augusto Quintana <%= Date.current.year %>.
+      copyright ® Augusto Quintana <%= Date.current.year %>.
     </footer>
   </body>
 </html>

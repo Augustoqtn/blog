@@ -11,3 +11,7 @@ Rails.start()
 ActiveStorage.start()
 import "bootstrap";
 import "../src/aplicattion.css";
+
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
